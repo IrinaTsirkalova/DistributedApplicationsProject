@@ -1,0 +1,65 @@
+﻿@model ML.WebsiteClient.Models.ArtistViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>ArtistViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="FName" class="control-label"></label>
+                <input asp-for="FName" class="form-control" />
+                <span asp-validation-for="FName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LName" class="control-label"></label>
+                <input asp-for="LName" class="form-control" />
+                <span asp-validation-for="LName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birthdate" class="control-label"></label>
+                <input asp-for="Birthdate" class="form-control" />
+                <span asp-validation-for="Birthdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistRating" class="control-label"></label>
+                <input asp-for="ArtistRating" class="form-control" />
+                <span asp-validation-for="ArtistRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfSongsProduced" class="control-label"></label>
+                <input asp-for="NumberOfSongsProduced" class="form-control" />
+                <span asp-validation-for="NumberOfSongsProduced" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentLabel" class="control-label"></label>
+                <input asp-for="CurrentLabel" class="form-control" />
+                <span asp-validation-for="CurrentLabel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
