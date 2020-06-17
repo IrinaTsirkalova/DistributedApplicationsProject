@@ -29,6 +29,7 @@ namespace ML.Data
 
             return Entities.ToList();
         }
+
         public virtual TEntity GetById(int id)
         {
             return Entities.Find(id);

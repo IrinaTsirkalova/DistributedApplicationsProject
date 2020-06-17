@@ -14,7 +14,7 @@ namespace ML.Business.Services
         {
             using (UnitOfWork unitOfWork = new UnitOfWork())
             {
-                var albums = unitOfWork.AlbumRepository.GetAll(a => a.AlbumTitle.Contains(albumTitle));
+                var albums = unitOfWork.AlbumRepository.GetAll(album => album.AlbumTitle.Contains(albumTitle));
 
                 var result = albums.Select(album => new AlbumDto
                 {

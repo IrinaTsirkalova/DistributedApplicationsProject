@@ -11,7 +11,7 @@ using ML.Business.Services;
 namespace ML.WebAPI.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public class GenresController : ControllerBase
     {
@@ -43,10 +43,10 @@ namespace ML.WebAPI.Controllers
             return Ok(result);
         }
 
-        
-       /* // GET: api/Genres/genreName
-        [HttpGet("{genreName}")]
-        public ActionResult<GenreDto> GetGenreName([FromRoute]string genreName)
+
+        // GET: api/Genres/genreName
+        [HttpGet("{id?}/{genreName}")]
+        public ActionResult<GenreDto> GetGenreName([FromRoute]string genreName,int id)
         {
             var result = genreService.GetAllByGenreName(genreName);
             if (result == null)
@@ -54,8 +54,8 @@ namespace ML.WebAPI.Controllers
                 return NotFound();
             }
             return Ok(result);
-        }*/
-       
+        }
+    
         
         // POST: api/Genres
         [HttpPost]

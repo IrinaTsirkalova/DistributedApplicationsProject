@@ -7,3 +7,12 @@ D:\University\Second Year\Third Semester\Разпределени приложе
 D:\University\Second Year\Third Semester\Разпределени приложения\CourseProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.csproj.CoreCompileInputs.cache
 D:\University\Second Year\Third Semester\Разпределени приложения\CourseProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.dll
 D:\University\Second Year\Third Semester\Разпределени приложения\CourseProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.pdb
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\bin\Debug\netstandard2.0\ML.Models.deps.json
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\bin\Debug\netstandard2.0\ML.Models.dll
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\bin\Debug\netstandard2.0\ML.Models.pdb
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.csprojAssemblyReference.cache
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.csproj.CoreCompileInputs.cache
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.AssemblyInfoInputs.cache
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.AssemblyInfo.cs
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.dll
+D:\University\Second Year\Third Semester\Разпределени приложения\GitHubRepository\DistributedApplicationsProject\MusicLibrary\ML.Models\obj\Debug\netstandard2.0\ML.Models.pdb

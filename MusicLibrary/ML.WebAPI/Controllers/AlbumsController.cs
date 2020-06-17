@@ -12,7 +12,7 @@ using ML.Models.Entities;
 namespace ML.WebAPI.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public class AlbumsController : ControllerBase
     {
@@ -43,12 +43,18 @@ namespace ML.WebAPI.Controllers
             return Ok(result);
         }
 
-        // GET: api/Albums/title
-        [HttpGet("{ablumTitle}")]
-        public IEnumerable<AlbumDto> GetAllAlbumsByTitle([FromRoute]string albumTitle)
+        // GET: api/Albums/id/title
+        [HttpGet("{id?}/{albumTitle}")]
+        public ActionResult<GenreDto> GetAlbumTitle(int id,[FromRoute]string albumTitle)
         {
-            return albumService.GetAllAlbumsByTitle(albumTitle);
+            var result = albumService.GetAllAlbumsByTitle(albumTitle);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
         }
+
 
         // POST: api/Albums
         [HttpPost]

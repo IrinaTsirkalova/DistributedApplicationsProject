@@ -11,7 +11,7 @@ namespace ML.WebsiteClient.Models
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "This field is Required! Please enter the name of the genre")]
         [MaxLength(50)]
         [Display(Name = "Name:")]
         public string GenreName { get; set; }

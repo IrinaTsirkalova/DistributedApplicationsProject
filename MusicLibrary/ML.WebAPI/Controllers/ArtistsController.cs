@@ -11,7 +11,7 @@ using ML.Business.Services;
 namespace ML.WebAPI.Controllers
 {
     [Route("api/[controller]")]
-   //[Authorize]
+    [Authorize]
     [ApiController]
     public class ArtistsController : ControllerBase
     {
@@ -42,9 +42,9 @@ namespace ML.WebAPI.Controllers
         }
 
 
-      /*  // GET: api/Artists/FName
-        [HttpGet("{FName}")]
-        public ActionResult<ArtistDto> GetAllByFirstName([FromRoute]string FName)
+        // GET: api/Artists/FName
+        [HttpGet("{id?}/{FName}")]
+        public ActionResult<ArtistDto> GetAllByFirstName([FromRoute]string FName, int id)
         {
             var result = artistService.GetAllByFirstName(FName);
             if (result == null)
@@ -54,7 +54,7 @@ namespace ML.WebAPI.Controllers
             return Ok(result);
         }
 
-        // GET: api/Artists/LName
+       /* // GET: api/Artists/LName
         [HttpGet("LName")]
         public ActionResult<ArtistDto> GetAllByLastName([FromRoute]string LName)
         {

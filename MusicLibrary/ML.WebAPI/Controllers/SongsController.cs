@@ -11,7 +11,7 @@ using ML.Business.Services;
 namespace ML.WebAPI.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public class SongsController : ControllerBase
     {
@@ -43,8 +43,8 @@ namespace ML.WebAPI.Controllers
 
 
         // GET: api/Genres/SongTitle
-        [HttpGet("{songTitle}")]
-        public ActionResult<SongDto> GetAllSongsByTitle([FromRoute]string songTitle)
+        [HttpGet("{id?}/{songTitle}")]
+        public ActionResult<SongDto> GetAllSongsByTitle([FromRoute]string songTitle, int id)
         {
             var result = songService.GetAllSongsByTitle(songTitle);
             if (result == null)
@@ -54,7 +54,7 @@ namespace ML.WebAPI.Controllers
             return Ok(result);
         }
         
-
+    
         // POST: api/Songs
         [HttpPost]
         public IActionResult Create([FromBody] SongDto song)

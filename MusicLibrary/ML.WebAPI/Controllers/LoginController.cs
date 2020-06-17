@@ -3,15 +3,15 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using ML.Business.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
+using ML.Business.DTOs;
 
-
-namespace ML.WebAPI.Controllers
-{ 
+namespace MC.Web.API.Controllers
+{
     [Route("api/[controller]")]
     [AllowAnonymous]
     public class LoginController : Controller
@@ -46,6 +46,7 @@ namespace ML.WebAPI.Controllers
             var claims = new Claim[]
             {
                 new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub, user.Username),
+                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
@@ -65,18 +66,9 @@ namespace ML.WebAPI.Controllers
             {
                 new UserDto
                 {
-                    Password = "test1Password",
-                    Username = "test1Username"
-                },
-                new UserDto
-                {
-                    Password = "test2Password",
-                    Username = "test2Username"
-                },
-                new UserDto
-                {
-                    Password = "test3Password",
-                    Username = "test3Username"
+                    Email = "admin@gmail.com",
+                    Username = "admin",
+                    Password = "admin"
                 }
             };
 
@@ -86,6 +78,7 @@ namespace ML.WebAPI.Controllers
             {
                 return new UserDto
                 {
+                    Email = foundUser.Email,
                     Username = foundUser.Username
                 };
             }

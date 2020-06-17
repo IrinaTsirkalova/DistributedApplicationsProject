@@ -11,12 +11,12 @@ namespace ML.WebsiteClient.Models
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "This field is Required! Please enter artist's first name!")]
         [MaxLength(50)]
         [Display(Name = "First name:")]
         public string FName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "This field is Required! Please enter artist's last name!")]
         [MaxLength(50)]
         [Display(Name = "Last name:")]
         public string LName { get; set; }
