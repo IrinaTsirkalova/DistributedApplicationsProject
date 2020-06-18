@@ -1,0 +1,78 @@
+﻿@model ML.WebsiteClient.Models.AlbumViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create a new album</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="AlbumTitle" class="control-label"></label>
+                <input asp-for="AlbumTitle" class="form-control" />
+                <span asp-validation-for="AlbumTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumDescription" class="control-label"></label>
+                <input asp-for="AlbumDescription" class="form-control" />
+                <span asp-validation-for="AlbumDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumReleaseDate" class="control-label"></label>
+                <input asp-for="AlbumReleaseDate" class="form-control" />
+                <span asp-validation-for="AlbumReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumNumberOfSongs" class="control-label"></label>
+                <input asp-for="AlbumNumberOfSongs" class="form-control" />
+                <span asp-validation-for="AlbumNumberOfSongs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumPrice" class="control-label"></label>
+                <input asp-for="AlbumPrice" class="form-control" />
+                <span asp-validation-for="AlbumPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumRating" class="control-label"></label>
+                <input asp-for="AlbumRating" class="form-control" />
+                <span asp-validation-for="AlbumRating" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ArtistId" class="control-label"></label>
+                @Html.DropDownListFor(artist => artist.ArtistId, ViewBag.ArtistAlbum as IEnumerable<SelectListItem>,
+                 htmlAttributes: new { @class = "form-control" })
+                <span asp-validation-for=" ArtistId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GenreId" class="control-label"></label>
+                @Html.DropDownListFor(genre => genre.GenreId, ViewBag.GenreAlbum as IEnumerable<SelectListItem>,
+                 htmlAttributes: new { @class = "form-control" })
+                <span asp-validation-for=" GenreId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SongId" class="control-label"></label>
+                @Html.DropDownListFor(song => song.SongId, ViewBag.SongAlbum as IEnumerable<SelectListItem>,
+                 htmlAttributes: new { @class = "form-control" })
+                <span asp-validation-for=" SongId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

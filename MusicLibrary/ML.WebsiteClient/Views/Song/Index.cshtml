@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ML.WebsiteClient.Models.SongViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Songs</h1>
+@Html.ActionLink("Search", "Search")
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SongTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SongDuration)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongTitle)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Artist.FName)
+                    @Html.DisplayFor(modelItem => item.Artist.LName)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongDuration)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

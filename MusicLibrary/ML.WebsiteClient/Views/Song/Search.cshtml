@@ -1,0 +1,22 @@
+﻿@model ML.WebsiteClient.Models.SongViewModel
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Search</h1>
+@Html.ActionLink("Search", "Search")
+
+<form asp-action="SearchResult">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="SongTitle" class="control-label">Enter song title: </label>
+        <input asp-for="SongTitle" class="form-control" />
+        <span asp-validation-for="SongTitle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+
+</form>

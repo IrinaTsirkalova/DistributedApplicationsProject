@@ -1,0 +1,21 @@
+﻿@model ML.WebsiteClient.Models.AlbumViewModel
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h3>Search albums</h3>
+@Html.ActionLink("Search", "Search")
+
+<form asp-action="SearchResult">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="AlbumTitle" class="control-label">Enter album title: </label>
+        <input asp-for="AlbumTitle" class="form-control" />
+        <span asp-validation-for="AlbumTitle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+
+</form>

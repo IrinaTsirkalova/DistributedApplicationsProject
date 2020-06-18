@@ -1,0 +1,18 @@
+﻿@model ML.WebsiteClient.Models.GenreViewModel
+@{
+    ViewData["Title"] = "SearchPreview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <form asp-action="SearchResult">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="GenreName" class="control-label">Enter genre name: </label>
+            <input asp-for="GenreName" class="form-control" />
+            <span asp-validation-for="GenreName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+        
+    </form>
