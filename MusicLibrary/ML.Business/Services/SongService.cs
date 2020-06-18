@@ -142,7 +142,7 @@ namespace ML.Business.Services
                     SongReleasedOn = songDto.SongReleasedOn,
                     SongRating = songDto.SongRating,
                     ArtistId = songDto.ArtistId,
-                    GenreId = songDto.ArtistId,
+                    GenreId = songDto.GenreId,
                     CreatedOn = DateTime.Now
                 };
 
