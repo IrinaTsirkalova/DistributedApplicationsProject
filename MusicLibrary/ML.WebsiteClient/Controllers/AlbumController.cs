@@ -80,7 +80,7 @@ namespace ML.WebsiteClient.Controllers
                 return View(responseData);
             }
         }
-
+        
         public ActionResult Search()
         {
 
@@ -199,8 +199,8 @@ namespace ML.WebsiteClient.Controllers
                 return songs.Select(song => new SelectListItem($"{song.SongTitle}", song.Id.ToString()));
             }
         }
+       
 
-      
         // POST: Album/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
